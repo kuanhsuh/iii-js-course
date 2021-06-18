@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES5 UI-BBCC</title>
+
+    <style>/* The Modal (background) */
+        .modal {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .rot-90 {
+            transform: rotate(90deg);
+        }</style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.2/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+
+<body class="font-sans">
+    <nav class="py-4 sticky top-0 bg-white shadow">
+        <div class="container mx-auto px-4 md:px-0">
+            <div class="flex flex-wrap justify-between items-end">
+                <div><img src="https://image.flaticon.com/icons/svg/1373/1373010.svg" alt="" class="inline-block w-8 mr-2">相機王
+                </div>
+                <ul class="hidden md:flex md:items-end md:w-auto">
+                    <li class="p-2  text-gray-600"><a href=" #">首頁</a></li>
+                    <li class="p-2  "><a href="#">關於我們</a></li>
+                    <li class="p-2  "><a href="#">商店</a></li>
+                    <li class="p-2  "><a href="#">Blog</a></li>
+                    <li class="p-2  "><a href="#">聯絡</a></li>
+                </ul>
+                <!-- Hamburger Menu -->
+                <span id="toggleMenu" class="block md:hidden">
+                    <span class="block" style="height: 1px; background-color: #000; margin: 6px 0; width: 25px;"></span>
+                    <span class="block" style="height: 1px; background-color: #000; margin: 6px 0; width: 25px;"></span>
+                    <span class="block" style="height: 1px; background-color: #000; margin: 6px 0; width: 25px;"></span>
+                </span>
+                <ul id="responsive" class="w-full hidden h-screen text-center md:hidden bg-white" style="position: absolute; z-index: 10; top: 0; left: 0">
+                    <li class="py-10 text-right pr-4">
+                        <!-- CROSS -->
+                        <span id="toggleMenu" class="inline-block relative" style="width: 25px; height: 25px; cursor: pointer;">
+                            <span class="block absolute" style="height: 1px; background-color: #000; margin: 6px 0; width: 25px; transform: rotate(45deg);"></span>
+                            <span class="block absolute top-0" style="height: 1px; background-color: #000; margin: 6px 0; width: 25px; transform: rotate(-45deg);"></span>
+                        </span>
+                    </li>
+                    <li class="py-6 text-gray-600">首頁</li>
+                    <li class="py-6">關於我們</li>
+                    <li class="py-6">商店</li>
+                    <li class="py-6">Blog</li>
+                    <li class="py-6">聯絡</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container-fluid">
+        <img src="https://images.pexels.com/photos/408518/pexels-photo-408518.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="w-full object-cover" style="min-height: 300px; max-height: 500px">
+    </header>
+
+    <section>
+        <div class="container mx-auto bg-white ">
+            <div class="flex flex-wrap">
+                <div class="w-full sm:w-3/12">
+                    <h2 class="p-4 bg-blue-800 text-white text-center text-3xl">所有產品</h2>
+                    <ul>
+
+                        <li class="p-4" style="border-bottom: 1px dashed #ccc;"><span class="flex justify-between items-center dropdown">類單眼<img src="https://image.flaticon.com/icons/svg/32/32213.svg" alt="" style="width: 14px; height: 14px; pointer-events: none;"></span>
+                            <ul class="hidden">
+                                <li class="pt-4 px-6 font-medium "><a href="#">Canon</a></li>
+                                <li class="pt-4 px-6 font-medium "><a href="#">Sony</a></li>
+                                <li class="pt-4 px-6 font-medium "><a href="#">Nikon</a></li>
+                                <li class="pt-4 px-6 font-medium "><a href="#">Samsung</a></li>
+                                <li class="pt-4 px-6 font-medium "><a href="#">Apple</a></li>
+                            </ul>
+                        </li>
+                        <li class="p-4" style="border-bottom: 1px dashed #ccc;"><span class="flex justify-between items-center dropdown">單眼相機<img src="https://image.flaticon.com/icons/svg/32/32213.svg" alt="" style="width: 14px; height: 14px; pointer-events: none;"></span>
+                            <ul class="hidden">
+                                <li class="pt-4 px-6 font-medium "><a href="#">Canon</a></li>
+                                <li class="pt-4 px-6 font-medium "><a href="#">Sony</a></li>
+                                <li class="pt-4 px-6 font-medium "><a href="#">Nikon</a></li>
+                                <li class="pt-4 px-6 font-medium "><a href="#">Samsung</a></li>
+                                <li class="pt-4 px-6 font-medium "><a href="#">Apple</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> <!-- sm:w-3/12 -->
+                <div class="w-full sm:w-9/12 py-10 px-4 sm:px-20">
+                    <h1 class="font-medium text-3xl mb-6"><span class="inline-block" style="border-bottom: 1px solid #434190;">所</span>有相機</h1>
+                    <!-- Modal Display -->
+                    <div class="flex flex-wrap -mx-2">
+                        <!-- 相機卡片 -->
+                        <div class="w-full sm:w-6/12 px-2">
+                            <div class="border rounded border-gray-300 overflow-hidden">
+                                <img src="https://images.pexels.com/photos/243757/pexels-photo-243757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="w-full">
+                                <h3 class="text-center pt-4 font-medium text-xl">最強單眼相機</h3>
+                                <p class="p-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint nulla
+                                    illum voluptate
+                                    veritatis
+                                    asperiores similique!</p>
+
+                                <div id="myBtn" class="px-4 py-2 bg-blue-500 text-white rounded text-center cursor-pointer">了解更多
+                                </div>
+
+                                <div id="myModal" class="modal hidden fixed z-10 top-0 left-0 w-full h-full overflow-auto">
+                                    <!-- Modal content -->
+                                    <div class="modal-content bg-gray-100 mx-auto my-40 p-4 border border-gray-600 w-6/12">
+                                        <div class="text-right text-3xl close">&times;</div>
+                                        <p>
+                                            這一台相機得所怎邊到，教西色才期；化望計備展做；年生市，同他列方有金起，印生基從樂之方多權，色點春環原建水山孩的寫結……運並解我最現形主層樣富林壓車，員數是：年及作可過。有線度眼土過無史主也省上很地驗成只現，得重但感雜論一會不有們一而愛動需拉功任，導統差的畫方對布！感了會應議他部看聲得？得小家海福交記單，格在上……兒依小思過少重統氣些業情保子春出需且聯本程眼書重我廠讀告廠了應必演母會形形給使程學，服對頭人得公說因沒據底。師回聯送的紅超變會反樂友可而子看復！實生改。走立來專包園性下；全報型布。
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- 相機卡片 -->
+                        <div class="w-full sm:w-6/12 px-2 ">
+                            <div class="border rounded border-gray-300 overflow-hidden">
+                                <img src="https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="w-full">
+                                <h3 class="text-center pt-4 font-medium text-xl">高CP值口袋機</h3>
+                                <p class="p-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint nulla
+                                    illum voluptate
+                                    veritatis
+                                    asperiores similique!</p>
+
+                                <div id="myBtn" class="px-4 py-2 bg-blue-500 text-white rounded text-center cursor-pointer">了解更多
+                                </div>
+
+                                <div id="myModal" class="modal hidden fixed z-10 top-0 left-0 w-full h-full overflow-auto">
+                                    <!-- Modal content -->
+                                    <div class="modal-content bg-gray-100 mx-auto my-40 p-4 border border-gray-600 w-6/12">
+                                        <div class="text-right text-3xl close">&times;</div>
+                                        <p>
+                                            這一台相機得所怎邊到，教西色才期；化望計備展做；年生市，同他列方有金起，印生基從樂之方多權，色點春環原建水山孩的寫結……運並解我最現形主層樣富林壓車，員數是：年及作可過。有線度眼土過無史主也省上很地驗成只現，得重但感雜論一會不有們一而愛動需拉功任，導統差的畫方對布！感了會應議他部看聲得？得小家海福交記單，格在上……兒依小思過少重統氣些業情保子春出需且聯本程眼書重我廠讀告廠了應必演母會形形給使程學，服對頭人得公說因沒據底。師回聯送的紅超變會反樂友可而子看復！實生改。走立來專包園性下；全報型布。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider / Related Products -->
+                    <hr class="my-10" style="border-top: 1px solid #ccc;">
+                    <h2 class="font-medium text-3xl mb-6"><span class="inline-block" style="border-bottom: 1px solid #434190;">相</span>關產品</h2>
+                    <!-- 輪播圖片 -->
+                    <div class=" -mx-2 owl-carousel">
+                        <!-- Camera Card -->
+                        <div class="w-full px-2 item">
+                            <img src="https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="w-full">
+                            <h3 class="mt-4 font-medium text-xl text-center">相機型號-1</h3>
+                        </div>
+                        <!-- Camera Card -->
+                        <div class="w-full px-2 item">
+                            <img src="https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="w-full">
+                            <h3 class="mt-4 font-medium text-xl text-center">相機型號-2</h3>
+                        </div>
+                        <!-- Camera Card -->
+                        <div class="w-full px-2 item">
+                            <img src="https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="w-full">
+                            <h3 class="mt-4 font-medium text-xl text-center">相機型號-3</h3>
+                        </div>
+                        <!-- Camera Card -->
+                        <div class="w-full px-2 item">
+                            <img src="https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="w-full">
+                            <h3 class="mt-4 font-medium text-xl text-center">相機型號-4</h3>
+                        </div>
+                        <!-- Camera Card -->
+                        <div class="w-full px-2 item">
+                            <img src="https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="w-full">
+                            <h3 class="mt-4 font-medium text-xl text-center">相機型號-5</h3>
+                        </div>
+                    </div>
+                </div> <!-- sm:w-9/12 -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-100 py-10 px-4 md:px-0">
+        <div class="container mx-auto max-w-3xl">
+            <h3 class="font-medium text-3xl mb-6 text-center"><span class="inline-block" style="border-bottom: 1px solid #434190;">聯</span>絡我們
+            </h3>
+            <!-- Form -->
+            <form id="form">
+                <div class="flex flex-wrap -mx-2">
+                    <div id="name" class="w-full sm:w-6/12 px-2">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">
+                            Name
+                        </label>
+                        <input class="shadow appearance-none border border rounded h-12 w-full py-2 px-3 text-grey-darker mb-3 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Name">
+                            <!-- Error Msg -->
+
+                    </div>
+                    <div id="email" class="w-full sm:w-6/12 px-2">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">
+                            Email
+                        </label>
+                        <input class="shadow appearance-none border border rounded h-12 w-full py-2 px-3 text-grey-darker mb-3 leading-tight focus:outline-none focus:shadow-outline" type="email" placeholder="email">
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-2">
+                    <div id="message" class="w-full px-2">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">
+                            Messsage
+                        </label>
+                        <textarea class="shadow appearance-none border border rounded h-12 w-full py-2 px-3 text-grey-darker mb-3 leading-tight focus:outline-none focus:shadow-outline h-32" placeholder="What's Your Message"></textarea>
+                    </div>
+
+                    <div class="w-full flex justify-center">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            Submit
+                        </button>
+                    </div>
+            </div></form>
+        </div>
+
+
+        
+    </footer>
+    <div class="copyright py-4 bg-gray-300">
+        <div class="flex justify-center">
+            Copyright @ Big Boy
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="/UIproject-ES6.e31bb0bc.js"></script>
+
+    <!-- <script src="./modules/Nav.js"></script>
+    <script src="./modules/Modal.js"></script>
+    <script src="./modules/Dropdown.js"></script> -->
+</body>
+
+</html>

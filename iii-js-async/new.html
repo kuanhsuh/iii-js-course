@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.4/tailwind.min.css">
+  <style>
+    html {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+  <nav class="py-4 bg-white shadow">
+    <div class="container mx-auto px-4 md:px-0 ">
+      <div class="flex flex-wrap justify-between items-end relative">
+        <div class="text-xl ">
+          <img src="https://image.flaticon.com/icons/png/512/136/136530.png" alt="" class="inline-block w-8"
+            style="vertical-align:bottom;" />
+          學JS的好地方
+        </div>
+        <ul class="hidden md:flex md:items-end md:w-auto text-xl  tracking-wide">
+          <li class="px-2 text-gray-600"><a href="/">Home</a></li>
+          <li class="px-2"><a href="/about-host.html">New</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="relative">
+    <img
+      src="https://images.pexels.com/photos/934062/pexels-photo-934062.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      alt="" class="w-full object-cover" style="height: 400px">
+    <div class="absolute" style="top: 50%; left: 65%; transform: translate(-50%, -50%)">
+      <h1 class="text-5xl font-medium mb-2">這是一個練習JS的Blog</h1>
+      <p class="text-2xl font-light">我要成為Javascript高手</p>
+      </di>
+  </header>
+
+  <section class="max-w-3xl container mx-auto py-20">
+    <!-- Form -->
+    <form class="w-full shadow p-4">
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <!-- 標題/Title -->
+        <div class="w-full px-3 mb-6 md:mb-0">
+          <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+            標題
+          </label>
+          <input
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            id="grid-first-name" type="text" placeholder="標題">
+        </div>
+      </div>
+      <!-- 內容/content -->
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+          <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+            內容
+          </label>
+          <textarea
+            class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+            id="message"></textarea>
+        </div>
+      </div>
+      <div class="md:flex md:items-center">
+        <div class="md:w-1/3">
+          <button
+            class="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+            type="button">
+            Send
+          </button>
+        </div>
+        <div class="md:w-2/3"></div>
+      </div>
+    </form>
+  </section>
+
+  <footer class="py-3 bg-gray-900 text-center text-gray-500">
+    <p>2018 © Copyright 鎰誠 All rights Reserved.</p>
+  </footer>
+
+
+  <script src="./modules/new.js"></script>
+
+</body>
+
+</html>
